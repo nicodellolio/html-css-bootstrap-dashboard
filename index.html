@@ -21,8 +21,18 @@
 
     <header>
        
-        <div class="searchbar">
-            <img src="" alt="" class="logo">
+        <div class="search d-flex justify-content-evenly py-1">
+            <a class="home" href="#"> 
+                <img src="./assets/img/mobile-logo.png" alt="Logo" class="logo-mobile">
+                <img src="./assets/img/logo.svg" alt="Logo" class="logo-desktop">
+            </a>
+
+            <div class="searchbar rounded-3">
+                <i class="fa-solid fa-search fs-4 py-3"></i>
+                <input type="search" name="search-in-the-page" id="search-in-the-page" placeholder="Prova a cercare: Lezioni di Laravel">
+            </div>
+            
+            <i class="fa-solid fa-bell fs-4 py-3" style="color: #ff8f00;"></i>
         </div>
         
     </header>
@@ -34,7 +44,7 @@
                 <div class="col_100 main_header"></div>
             </div>
 
-            <div class="data_container_central">   
+            <div class="data_container_central">
 
                 <div class="ms_row left_row">
                     <div class="next_classes col_large"></div>

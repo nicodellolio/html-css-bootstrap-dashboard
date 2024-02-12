@@ -6,10 +6,14 @@
 
 :root {
     --bg_primary-: #1b72e8;
-    --bg_secondary: #10283d;
-    --input_success: #198754;
-    --input_warning: #FFC107;
-    --input_danger: #DC3545;
+    --bg_secondary-: #10283d;
+    --bg-thirtary-: #f8f9fa;
+    --bg-searchbar-: #eaeaea;
+    --input_success-: #198754;
+    --input_warning-: #FFC107;
+    --input_danger-: #DC3545;
+    --bell-: #ff8f00FF;
+
 }
 
 .col_100 {
@@ -26,6 +30,35 @@ header {
     position: fixed;
     width: 100%;
     z-index: 10;
+    padding: 0.5rem 0;
+    background-color: var(--bg-thirtary-);
+
+
+    >.search{
+        background-color: #fff;
+
+        .searchbar{
+            display: flex;
+            gap: 1rem;
+            width: 70%;
+            background-color: var(--bg-searchbar-);
+            padding: 0 0.5rem;
+
+            input{
+                border: none;
+                width: 80%;
+                background-color: transparent;
+            }
+        }        
+
+        .logo-mobile{
+            width: 50px;
+        }
+        .logo-desktop{
+            display: none;
+        }
+
+    }
 }
 
 .sidebar {
@@ -33,7 +66,7 @@ header {
     height: 100%;
     position: fixed;
     top: 70px;
-    background-color: var(--bg_secondary);
+    background-color: var(--bg_secondary-);
 }
 
 
@@ -55,10 +88,10 @@ header {
     border: 1px dashed black;
 }
 
-.debug header {
+/* .debug header {
     background-color: grey;
     height: 70px
-}
+} */
 
 .debug .data_container {
     background-color: skyblue;
@@ -93,15 +126,39 @@ header {
 }
 
 
-@media screen and (min-width: 768px) {}
+@media screen and (min-width: 768px) {
+
+    header {
+        >.search{
+            .searchbar{
+                width: 80%;
+            }
+        }
+    }
+}
 
 
 
 
 @media screen and (min-width: 1140px) {
 
+    header{
+        >.search{
+
+            .logo-desktop{
+                display: block;
+                padding-top: 1rem;
+            }
+
+            
+            & .logo-mobile{ 
+                display: none;
+            }
+        }
+    }
+
     .sidebar {
-        width: 150px;
+        width: 180px;
         position: static;
         height: calc(100vh - 70px);
     }
