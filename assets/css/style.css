@@ -1,3 +1,84 @@
 *{
-    font-family: 'Roboto', sans-serif;
+    font-family: Roboto, sans-serif;
+}
+
+/* ### UTILITIES ### */
+
+:root{
+    --bg_primary-: #1b72e8;
+    --bg_secondary: #10283d;
+    --input_success: #198754;
+    --input_warning: #FFC107;
+    --input_danger: #DC3545;
+}
+
+.col_100{
+    width: 100%;
+}
+.col_large{
+    width: calc((100% / 12) * 8);
+}
+.col_small{
+    width: calc((100% / 12) * 4);
+}
+.ms_row{
+    width: 100%;
+}
+
+
+
+/* ### MAIN STYLE SHEET ### */
+
+main{
+    display: flex;
+}
+
+.data_container{
+    display: flex;
+}
+
+
+
+
+
+/* ### DEBUG SECTION ### */
+.debug *{
+    /* border: dashed grey; */
+}
+
+.debug header{
+    background-color: grey;
+    height: 70px
+}
+
+.debug .sidebar{
+    background-color: var(--bg_secondary);
+    width: 70px;
+    height: 100vh;
+}
+.debug .data_container{
+    background-color: skyblue;
+    width: calc(100% - 70px);
+    height: 100vh;
+}
+.debug .main_header{
+    background-color: var(--bg_primary-);
+    height: 150px;
+}
+.debug .next_classes{
+    background-color: gold;
+    height: 800px;
+}
+.debug .faq{
+    background-color: green;
+    height: 400px;
+}
+.debug .todo{
+    background-color: chocolate;
+    height: 200px;
+}
+.debug .graph{
+    background-color: seagreen;
+    height: 700px;
+
 }
