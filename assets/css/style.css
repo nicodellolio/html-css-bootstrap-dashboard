@@ -15,12 +15,7 @@
 .col_100{
     width: 100%;
 }
-.col_large{
-    width: calc((100% / 12) * 8);
-}
-.col_small{
-    width: calc((100% / 12) * 4);
-}
+
 .ms_row{
     width: 100%;
 }
@@ -32,10 +27,7 @@
 main{
     display: flex;
 }
-.data_row{
-    display: flex;
-    flex-wrap: wrap;
-}
+
 
 
 
@@ -80,5 +72,28 @@ main{
 .debug .graph{
     background-color: seagreen;
     height: 650px;
+
+}
+
+
+@media screen and (min-width: 768px) {
+    
+}
+
+@media screen and (min-width: 1140px) {
+
+    .data_row{
+        display: flex;
+        flex-wrap: wrap;
+
+        > .col_large{
+            width: calc((100% / 12) * 8);
+        }
+        > .col_small{
+            width: calc((100% / 12) * 4);
+        }
+    }
+    
+
 
 }
