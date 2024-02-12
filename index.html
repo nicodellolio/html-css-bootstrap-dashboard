@@ -22,7 +22,7 @@
     <header>
        
         <div class="search d-flex justify-content-evenly py-1">
-            <a class="home" href="#"> 
+            <a href="#"> 
                 <img src="./assets/img/mobile-logo.png" alt="Logo" class="logo-mobile">
                 <img src="./assets/img/logo.svg" alt="Logo" class="logo-desktop">
             </a>
@@ -38,7 +38,45 @@
     </header>
 
     <main>
-        <div class="sidebar"></div>
+        <div class="sidebar">
+            <nav class="page_nav d-flex flex-column justify-content-between">
+
+                <div class="sidebar_commands">
+
+                    <div class="home_sidebar">
+                        <a href="#">
+                            <i class="fa-solid fa-home fs-3"></i>
+                            <span>Home</span>
+                        </a>
+                    </div>
+
+                    <div class="stats_sidebar">
+                        <a href="#">
+                            <i class="fa-solid fa-chart-simple fs-3 me-2"></i>
+                            <span>Stats</span>
+                        </a>
+                    </div>
+
+                    <div class="signal_sidebar">
+                        <a href="#">
+                            <i class="fa-solid fa-signal fs-4"></i>
+                            <span>Signal</span>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="admin">
+                    <a href="#">
+                        <i class="fa-solid fa-gear fs-3"></i>
+                        <span>Admin</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+
+
         <div class="data_container">
             <div class="ms_row head_row">
                 <div class="col_100 main_header"></div>
