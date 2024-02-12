@@ -1,10 +1,10 @@
-*{
+* {
     font-family: Roboto, sans-serif;
 }
 
 /* ### UTILITIES ### */
 
-:root{
+:root {
     --bg_primary-: #1b72e8;
     --bg_secondary: #10283d;
     --input_success: #198754;
@@ -12,21 +12,38 @@
     --input_danger: #DC3545;
 }
 
-.col_100{
+.col_100 {
     width: 100%;
 }
-
-.ms_row{
-    width: 100%;
-}
-
-
 
 /* ### MAIN STYLE SHEET ### */
 
-main{
+main {
     display: flex;
 }
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+.sidebar {
+    width: 70px;
+    height: 100%;
+    position: fixed;
+    top: 70px;
+    background-color: var(--bg_secondary);
+}
+
+
+.data_container {
+    position: relative;
+    left: 70px;
+    top: 70px;
+}
+
+
 
 
 
@@ -34,66 +51,79 @@ main{
 
 
 /* ### DEBUG SECTION ### */
-.debug *{
-    /* border: dashed grey; */
+.debug * {
+    border: 1px dashed black;
 }
 
-.debug header{
+.debug header {
     background-color: grey;
     height: 70px
 }
 
-.debug .sidebar{
-    background-color: var(--bg_secondary);
-    width: 70px;
-    height: 100vh;
-}
-.debug .data_container{
+.debug .data_container {
     background-color: skyblue;
     width: calc(100% - 70px);
-    height: 100vh;
+    height: 100%;
 }
-.debug .main_header{
+
+.debug .main_header {
     background-color: var(--bg_primary-);
-    height: 150px;
+    height: 260px;
 }
-.debug .next_classes{
+
+.debug .next_classes {
     background-color: gold;
     height: 520px;
 }
-.debug .faq{
+
+.debug .faq {
     background-color: green;
     height: 250px;
 }
-.debug .todo{
+
+.debug .todo {
     background-color: chocolate;
     height: 200px;
 }
-.debug .graph{
+
+.debug .graph {
     background-color: seagreen;
-    height: 650px;
+    height: 570px;
 
 }
 
 
-@media screen and (min-width: 768px) {
-    
-}
+@media screen and (min-width: 768px) {}
+
+
+
 
 @media screen and (min-width: 1140px) {
 
-    .data_row{
+    .sidebar {
+        width: 150px;
+        position: static;
+        height: calc(100vh - 70px);
+    }
+    header{
+        position: static;
+    }
+
+    .data_container{
+        position: static;
+    }
+
+    .data_container_central {
         display: flex;
         flex-wrap: wrap;
 
-        > .col_large{
+        >.left_row {
             width: calc((100% / 12) * 8);
         }
-        > .col_small{
+
+        >.right_row {
             width: calc((100% / 12) * 4);
         }
     }
-    
-
 
 }
