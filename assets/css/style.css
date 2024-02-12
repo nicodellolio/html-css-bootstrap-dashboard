@@ -32,9 +32,9 @@
 main{
     display: flex;
 }
-
-.data_container{
+.data_row{
     display: flex;
+    flex-wrap: wrap;
 }
 
 
@@ -67,11 +67,11 @@ main{
 }
 .debug .next_classes{
     background-color: gold;
-    height: 800px;
+    height: 520px;
 }
 .debug .faq{
     background-color: green;
-    height: 400px;
+    height: 250px;
 }
 .debug .todo{
     background-color: chocolate;
@@ -79,6 +79,6 @@ main{
 }
 .debug .graph{
     background-color: seagreen;
-    height: 700px;
+    height: 650px;
 
 }
