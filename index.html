@@ -36,7 +36,21 @@
             <i class="fa-solid fa-list-ul fs-4 py-3 mx-2 d-none d-xl-inline-block"></i>
             <i class="fa-solid fa-circle-question fs-4 py-3 d-none d-xl-inline-block"></i>
             <i class="fa-solid fa-ellipsis-vertical fs-4 py-3 mx-2 d-none d-xl-inline-block"></i>
-            <i class="fa-solid fa-bell fs-4 py-3 text-warning mx-2 "></i>
+            
+            <div class="nav-item dropdown">
+                <a class="nav-link" href="#" id="dropdownId"            data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-bell fs-4 py-3 text-warning mx-2 aria" aria-hidden="true"></i>    
+                </a>
+
+                <div class="dropdown-menu dropdown-menu-end"
+                    aria-labelledby="dropdownId">
+                    <a class="dropdown-item" href="#">Profilo</a> 
+                    <a class="dropdown-item" href="#">Fatturazione</a>
+                    <a class="dropdown-item" href="#">Logout</a>
+                </div>
+            </div>
+
+            
         </nav>
 
     </header>
@@ -131,7 +145,7 @@
                         <div class="table-responsive ms_table px-2 p-2 border border-dark-subtle rounded-bottom-3 mx-3 bg-white">
 
 
-                            <table class="table">
+                            <table class="table table-hover">
                                 <thead>
                                     <tr class="text-center">
                                         <th class="text-start" scope="col">Nome</th>

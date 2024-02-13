@@ -170,47 +170,13 @@ header {
 }
 
 
-
-
-
-
-
-
-
-/* ### DEBUG SECTION ### */
-/* .debug * {
-    border: 1px dashed black;
-} */
-
-/* .debug header {
-    background-color: grey;
-    height: 70px
-} */
-
-/* .debug .main_header {
-    height: 260px;
-} */
-
-
-/* .debug .faq {
-    background-color: green;
-    height: 250px;
-} */
-/* 
-.debug .todo {
-    background-color: chocolate;
-    height: 200px;
-} */
-
-/* .debug .graph {
-    background-color: seagreen;
-    height: 570px;
-
-} */
-
+.sidebar_commands a:hover{
+    background-color: rgba(211, 211, 211, 0.472);
+    padding: 0.5rem;
+}
 
 @media screen and (min-width: 768px) {
-
+    
     header {
         >.head-nav {
             .searchbar {
@@ -218,77 +184,75 @@ header {
             }
         }
     }
-
+    
     .main_header {
         justify-content: center;
-
+        
         .md_left,
         .md_middle {
             order: -1
         }
-
+        
         .w-33 {
             width: calc(100% / 3);
         }
-
-
+        
+        
     }
-
-
+    
+    
 }
 
 
-
-
 @media screen and (min-width: 1200px) {
-
+    
     header {
         >.head-nav {
-
+            
             .logo-desktop {
                 display: block;
                 padding-top: 1rem;
             }
-
-
+            
+            
             & .logo-mobile {
                 display: none;
             }
         }
     }
-
+    
     .sidebar {
         width: 180px;
         position: static;
         height: calc(100vh - 70px);
-
+        
         nav {
             height: 100%;
-
+            
             a {
                 display: flex;
-
+                
             }
-
+            
             span {
                 display: block;
             }
-
+            
         }
     }
-
+    
     header {
         position: static;
     }
-
+    
     .data_container {
         position: static;
     }
-
+    
     .main_header {
         justify-content: space-between;
     }
-
+    
     .data_container{
         .main_header{
             & .boolean {
@@ -296,18 +260,51 @@ header {
             }
         }
     }
-
+    
     .data_container_central {
         display: flex;
         flex-wrap: wrap;
-
+        
         >.left_row {
             width: calc((100% / 12) * 8);
         }
-
+        
         >.right_row {
             width: calc((100% / 12) * 4);
         }
     }
-
 }
+
+
+    
+ /* ### DEBUG SECTION ### */
+    /* .debug * {
+        border: 1px dashed black;
+    } */
+    
+    /* .debug header {
+        background-color: grey;
+        height: 70px
+    } */
+    
+    /* .debug .main_header {
+        height: 260px;
+    } */
+    
+    /* .debug .faq {
+    
+        background-color: green;
+        height: 250px;
+    } */
+    
+    /* 
+    .debug .todo {
+        background-color: chocolate;
+        height: 200px;
+    } */
+    
+    /* .debug .graph {
+        background-color: seagreen;
+        height: 570px;
+    
+    } */
