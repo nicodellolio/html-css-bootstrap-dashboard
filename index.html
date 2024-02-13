@@ -36,21 +36,20 @@
             <i class="fa-solid fa-list-ul fs-4 py-3 mx-2 d-none d-xl-inline-block"></i>
             <i class="fa-solid fa-circle-question fs-4 py-3 d-none d-xl-inline-block"></i>
             <i class="fa-solid fa-ellipsis-vertical fs-4 py-3 mx-2 d-none d-xl-inline-block"></i>
-            
+
             <div class="nav-item dropdown">
-                <a class="nav-link" href="#" id="dropdownId"            data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fa-solid fa-bell fs-4 py-3 text-warning mx-2 aria" aria-hidden="true"></i>    
+                <a class="nav-link" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-bell fs-4 py-3 text-warning mx-2 aria" aria-hidden="true"></i>
                 </a>
 
-                <div class="dropdown-menu dropdown-menu-end"
-                    aria-labelledby="dropdownId">
-                    <a class="dropdown-item" href="#">Profilo</a> 
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownId">
+                    <a class="dropdown-item" href="#">Profilo</a>
                     <a class="dropdown-item" href="#">Fatturazione</a>
                     <a class="dropdown-item" href="#">Logout</a>
                 </div>
             </div>
 
-            
+
         </nav>
 
     </header>
@@ -93,15 +92,18 @@
             </nav>
         </div>
 
-
-
         <div class="data_container">
             <div class="ms_row head_row">
 
-                <div id="direct-link-plus" class="col_100 main_header d-md-flex pb-3 pb-md-1 pt-4">
+                <div id="direct-link-plus" class="col_100 main_header   d-md-flex pb-3 pb-md-1 pt-4">
                     <div class="w-33 p-3 px-md-1 md_right">
                         <span class="fs-5">Nuovo Studente</span>
-                        <span class="plus fs-1 px-3 py-2 rounded-3 ms-3">+</span>
+
+                        <button class="btn btn-primary plus fs-5 px-3 rounded-3 ms-3" type="button"
+                            data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
+                            aria-controls="offcanvasWithBothOptions">+
+                        </button>
+
                     </div>
 
                     <div class="w-33 pt-3 md_left ps-3">
@@ -132,6 +134,79 @@
                 </div>
             </div>
 
+
+
+
+
+            <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+            aria-labelledby="offcanvasWithBothOptionsLabel">
+
+            <button type="button" class="btn-close position-absolute top-0 end-0 " data-bs-dismiss="offcanvas" aria-label="Close"></button>
+
+            <div class="offcanvas-header">
+                <div class="offcanvas-title f-5" id="offcanvasWithBothOptionsLabel">Inserisci un nuovo studente</div>
+            </div>
+
+                <form class="row g-3 px-5 py-5">
+                    <div class="col-md-6">
+                        <label for="inputName4" class="form-label">Name</label>
+                        <input type="name" class="form-control" id="inputName4">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputSurname4" class="form-label">Surname</label>
+                        <input type="surname" class="form-control" id="inputSurname4">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputEmail4" class="form-label">Email</label>
+                        <div class="input-group">
+                            <span class="input-group-text" id="inputGroupPrepend">@</span>
+                            <input type="email" class="form-control" id="inputEmail4">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputPassword4" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="inputPassword4">
+                    </div>
+                    <div class="col-12">
+                        <label for="inputAddress" class="form-label">Indirizzo</label>
+                        <input type="text" class="form-control" id="inputAddress">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputCity" class="form-label">Città</label>
+                        <input type="text" class="form-control" id="inputCity">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="inputState" class="form-label">Stato</label>
+                        <select id="inputState" class="form-select">
+                            <option selected>Scegli...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="inputZip" class="form-label">CAP</label>
+                        <input type="text" class="form-control" id="inputZip">
+                    </div>
+                    
+                    <div class="col-12 mb-3">
+                        <label for="formFile" class="form-label">Foto</label>
+                        <input class="form-control" type="file" id="formFile">
+                    </div>
+            
+                    <div class="col-12">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                                Seleziona per proseguire
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Salva</button>
+                        <button type="reset" class="btn btn-warning">Svuota</button>
+                    </div>
+                </form>
+            </div>
+
             <div class="data_container_central">
 
                 <div class="ms_row left_row">
@@ -142,7 +217,8 @@
                             Prossime classi
                         </div>
 
-                        <div class="table-responsive ms_table px-2 p-2 border border-dark-subtle rounded-bottom-3 mx-3 bg-white">
+                        <div
+                            class="table-responsive ms_table px-2 p-2 border border-dark-subtle rounded-bottom-3 mx-3 bg-white">
 
 
                             <table class="table table-hover">
@@ -401,8 +477,9 @@
                             <li class="list-group-item per-month">Gennaio: 1200</li>
                             <li class="list-group-item per-month">Febbraio: 800</li>
                             <li class="list-group-item per-month">Marzo: 1500</li>
-                            <li class="list-group-item per-month py-3"><a href="#">Visualizza report approfondito</a></li>
-                          </ul>
+                            <li class="list-group-item per-month py-3"><a href="#">Visualizza report approfondito</a>
+                            </li>
+                        </ul>
 
                     </div>
                 </div>

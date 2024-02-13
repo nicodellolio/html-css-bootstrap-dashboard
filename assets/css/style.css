@@ -175,6 +175,10 @@ header {
     padding: 0.5rem;
 }
 
+.offcanvas.offcanvas-end{
+    width: 100%;
+}
+
 @media screen and (min-width: 768px) {
     
     header {
@@ -203,6 +207,11 @@ header {
     
 }
 
+@media screen and (min-width: 992px){
+    .offcanvas.offcanvas-end{
+        width: 75%;
+    }
+}
 
 @media screen and (min-width: 1200px) {
     
@@ -272,6 +281,10 @@ header {
         >.right_row {
             width: calc((100% / 12) * 4);
         }
+    }
+
+    .offcanvas.offcanvas-end{
+        width: 50%;
     }
 }
 
