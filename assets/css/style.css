@@ -69,6 +69,7 @@ header {
     height: 100%;
     position: fixed;
     top: 78px;
+    background-image: url(../img/sidebar-bg.png);
     background-color: var(--bg_secondary-);
 
     nav{
@@ -114,10 +115,6 @@ header {
             font-size: 1.8rem;
         }
 
-        .md_left, .md_middle, .md_right{
-        ;    
-        }
-
         .plus{
             border: 1px solid #fff;
         }
@@ -127,6 +124,22 @@ header {
             border-radius: 20px;
         }
     }
+
+    .container_title{
+        font-weight: 500;
+    }
+
+    .table{
+        .stato{
+            font-size: 0.75rem;
+        }
+
+        td img{
+            width: 30px;
+            margin-right: 0.5rem;
+        }
+    }
+    
 }
 
 
@@ -137,9 +150,9 @@ header {
 
 
 /* ### DEBUG SECTION ### */
-.debug * {
-    /* border: 1px dashed black; */
-}
+/* .debug * {
+    border: 1px dashed black;
+} */
 
 /* .debug header {
     background-color: grey;
@@ -150,10 +163,6 @@ header {
     height: 260px;
 } */
 
-.debug .next_classes {
-    background-color: gold;
-    height: 520px;
-}
 
 .debug .faq {
     background-color: green;
