@@ -8,6 +8,7 @@
     --bg_primary-: #1b72e8;
     --bg_secondary-: #10283d;
     --bg-thirtary-: #f8f9fa;
+    --bg-main-: #e8e9ea;
     --bg-searchbar-: #eaeaea;
     --input_success-: #198754;
     --input_warning-: #FFC107;
@@ -26,6 +27,7 @@
 
 main {
     display: flex;
+    background-color: var(--bg-main-);
 }
 
 header {
@@ -36,28 +38,29 @@ header {
     background-color: var(--bg-thirtary-);
 
 
-    >.search{
+    >.head-nav {
         background-color: #fff;
 
-        .searchbar{
+        .searchbar {
             display: flex;
             gap: 1rem;
             width: 70%;
             background-color: var(--bg-searchbar-);
             padding: 0 0.5rem;
 
-            input{
+            input {
                 border: none;
                 width: 80%;
                 background-color: transparent;
             }
-        }        
+        }
 
-        .logo-mobile{
+        .logo-mobile {
             width: 50px;
             margin-left: -0.75rem;
         }
-        .logo-desktop{
+
+        .logo-desktop {
             display: none;
         }
 
@@ -72,27 +75,27 @@ header {
     background-image: url(../img/sidebar-bg.png);
     background-color: var(--bg_secondary-);
 
-    nav{
+    nav {
         height: 93%;
         padding: 2rem 1.5rem;
 
-        .sidebar_commands{
+        .sidebar_commands {
             display: flex;
             flex-direction: column;
             gap: 1rem;
         }
 
-        span{
+        span {
             padding-left: 0.75rem;
             display: none;
         }
 
-        a{
+        a {
             color: #fff;
             text-decoration: none;
         }
 
-        .admin{
+        .admin {
             color: white;
         }
 
@@ -107,7 +110,7 @@ header {
     width: calc(100% - 70px);
     height: 100%;
 
-    .main_header{
+    .main_header {
         color: #fff;
         background-color: var(--bg_primary-);
 
@@ -115,32 +118,57 @@ header {
             font-size: 1.8rem;
         }
 
-        .plus{
+        .plus {
             border: 1px solid #fff;
         }
 
-        .bg-emphasis{
+        .bg-emphasis {
             background-color: var(--bg-em-main_header-);
             border-radius: 20px;
         }
     }
 
-    .container_title{
+    .container_title {
         font-weight: 500;
     }
 
-    .table{
-        .stato{
+    .table {
+        .stato {
             font-size: 0.75rem;
         }
 
-        td img{
+        td img {
             width: 30px;
             margin-right: 0.5rem;
         }
     }
-    
 }
+
+.faq {
+    font-size: 0.85rem;
+
+    & .accordion-button {
+        font-size: 0.85rem;
+    }
+
+}
+
+.graph {
+    & ul {
+        .list-group-item {
+            font-size: 1.15rem;
+        }
+
+        & aside {
+            font-size: 0.75rem;
+        }
+
+        & .per-month {
+            font-size: 0.85rem;
+        }
+    }
+}
+
 
 
 
@@ -164,45 +192,46 @@ header {
 } */
 
 
-.debug .faq {
+/* .debug .faq {
     background-color: green;
     height: 250px;
-}
-
+} */
+/* 
 .debug .todo {
     background-color: chocolate;
     height: 200px;
-}
+} */
 
-.debug .graph {
+/* .debug .graph {
     background-color: seagreen;
     height: 570px;
 
-}
+} */
 
 
 @media screen and (min-width: 768px) {
 
     header {
-        >.search{
-            .searchbar{
+        >.head-nav {
+            .searchbar {
                 width: 80%;
             }
         }
     }
 
-    .main_header{
+    .main_header {
         justify-content: center;
 
-        .md_left, .md_middle{
+        .md_left,
+        .md_middle {
             order: -1
         }
-        
-        .w-33{
+
+        .w-33 {
             width: calc(100% / 3);
         }
 
-        
+
     }
 
 
@@ -213,16 +242,16 @@ header {
 
 @media screen and (min-width: 1200px) {
 
-    header{
-        >.search{
+    header {
+        >.head-nav {
 
-            .logo-desktop{
+            .logo-desktop {
                 display: block;
                 padding-top: 1rem;
             }
 
-            
-            & .logo-mobile{ 
+
+            & .logo-mobile {
                 display: none;
             }
         }
@@ -233,30 +262,39 @@ header {
         position: static;
         height: calc(100vh - 70px);
 
-        nav{
+        nav {
             height: 100%;
 
-            a{
+            a {
                 display: flex;
 
             }
 
-            span{
+            span {
                 display: block;
             }
 
         }
     }
-    header{
+
+    header {
         position: static;
+    }
+
+    .data_container {
+        position: static;
+    }
+
+    .main_header {
+        justify-content: space-between;
     }
 
     .data_container{
-        position: static;
-    }
-
-    .main_header{
-        justify-content: space-between;
+        .main_header{
+            & .boolean {
+                font-size: 2.3rem;
+            }
+        }
     }
 
     .data_container_central {

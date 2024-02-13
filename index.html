@@ -17,24 +17,28 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body class="debug">
+<body>
 
     <header>
-       
-        <div class="search d-flex justify-content-evenly py-1">
-            <a href="#"> 
+
+        <nav class="head-nav d-flex justify-content-evenly py-1">
+            <a href="#">
                 <img src="./assets/img/mobile-logo.png" alt="Logo" class="logo-mobile">
                 <img src="./assets/img/logo.svg" alt="Logo" class="logo-desktop">
             </a>
 
             <div class="searchbar rounded-3">
                 <i class="fa-solid fa-search fs-4 py-3"></i>
-                <input type="search" name="search-in-the-page" id="search-in-the-page" placeholder="Prova a cercare: Lezioni di Laravel">
+                <input type="search" name="search-in-the-page" id="search-in-the-page"
+                    placeholder="Prova a cercare: Lezioni di Laravel">
             </div>
-            
-            <i class="fa-solid fa-bell fs-4 py-3" style="color: #ff8f00;"></i>
-        </div>
-        
+
+            <i class="fa-solid fa-list-ul fs-4 py-3 mx-2 d-none d-xl-inline-block"></i>
+            <i class="fa-solid fa-circle-question fs-4 py-3 d-none d-xl-inline-block"></i>
+            <i class="fa-solid fa-ellipsis-vertical fs-4 py-3 mx-2 d-none d-xl-inline-block"></i>
+            <i class="fa-solid fa-bell fs-4 py-3 text-warning mx-2 "></i>
+        </nav>
+
     </header>
 
     <main>
@@ -80,10 +84,10 @@
         <div class="data_container">
             <div class="ms_row head_row">
 
-                <div class="col_100 main_header d-md-flex pb-3 pb-md-1">
+                <div id="direct-link-plus" class="col_100 main_header d-md-flex pb-3 pb-md-1 pt-4">
                     <div class="w-33 p-3 px-md-1 md_right">
                         <span class="fs-5">Nuovo Studente</span>
-                        <span class="plus fs-1 px-3 py-2 rounded ms-3">+</span>
+                        <span class="plus fs-1 px-3 py-2 rounded-3 ms-3">+</span>
                     </div>
 
                     <div class="w-33 pt-3 md_left ps-3">
@@ -100,7 +104,7 @@
                             <span class="bg-emphasis d-none d-xl-inline px-1 py-1-">Boolean web app</span>
                             <span class="bg-emphasis d-none d-xl-inline px-2 py-1">Boolean blog app</span>
 
-                        </div>          
+                        </div>
                     </div>
 
                     <div class="w-33 p-3 py-md-4 md_middle">
@@ -109,7 +113,7 @@
                         </div>
                         <div class="bottom">
                             <span class="fs-2">125</span>
-                        </div>          
+                        </div>
                     </div>
                 </div>
             </div>
@@ -119,18 +123,20 @@
                 <div class="ms_row left_row">
                     <div class="next_classes col_large">
 
-                        <div class="container_title fs-2 mx-3 mt-5 px-2 pt-2 pb-3 border border-bottom-0 rounded-top border-dark-subtle bg-body-tertiary">Prossime classi
+                        <div
+                            class="container_title fs-2 mx-3 mt-5 px-3 pt-2 pb-2 border border-bottom-0 rounded-top-3 border-dark-subtle bg-body-tertiary">
+                            Prossime classi
                         </div>
-                        
-                        <div class="table-responsive ms_table px-2 p-4 border border-dark-subtle rounded-bottom-3 mx-3">
+
+                        <div class="table-responsive ms_table px-2 p-2 border border-dark-subtle rounded-bottom-3 mx-3 bg-white">
 
 
                             <table class="table">
                                 <thead>
                                     <tr class="text-center">
                                         <th class="text-start" scope="col">Nome</th>
-                                        <th class="d-none d-md-block" scope="col">Data inizio</th>
-                                        <th class="d-none d-md-block" scope="col">ROI</th>
+                                        <th class="d-none d-md-table-cell" scope="col">Data inizio</th>
+                                        <th class="d-none d-md-table-cell" scope="col">ROI</th>
                                         <th scope="col">Stato</th>
                                         <th scope="col">Azioni</th>
                                     </tr>
@@ -141,26 +147,32 @@
                                             <img src="./assets/img/class-avatar Background Removed.png" alt="">
                                             Classe 75
                                         </td>
-                                        <td  class="d-none d-md-block">15 Feb 2021</td>
-                                        <td  class="d-none d-md-block">20%</td>
-                                        <td><span class="stato bg-success text-white py-1 px-2 rounded-3">Done</span></td>
+                                        <td class="d-none d-md-table-cell">15 Feb 2021</td>
+                                        <td class="d-none d-md-table-cell">20%</td>
+                                        <td><span class="stato bg-success text-white py-1 px-2 rounded-3">Done</span>
+                                        </td>
                                         <td>
-                                            <i class="fa-solid fa-pen border border-dark-subtle p-2 text-body-secondary rounded-3 mx-1"></i>
-                                            <i class="fa-solid fa-trash border border-dark-subtle p-2 text-body-secondary rounded-3"></i>
+                                            <i
+                                                class="fa-solid fa-pen border border-dark-subtle p-2 text-body-secondary rounded-3 mx-1"></i>
+                                            <i
+                                                class="fa-solid fa-trash border border-dark-subtle p-2 text-body-secondary rounded-3"></i>
                                         </td>
                                     </tr>
                                     <tr class="text-center">
                                         <td class="text-start" scope="row">
                                             <img src="./assets/img/class-avatar Background Removed.png" alt="">
-                                            
+
                                             Classe 76
                                         </td>
-                                        <td class="d-none d-md-block">16 Feb 2021</td>
-                                        <td class="d-none d-md-block">20%</td>
-                                        <td><span class="stato bg-success text-white py-1 px-2 rounded-3">Done</span></td>
+                                        <td class="d-none d-md-table-cell">16 Feb 2021</td>
+                                        <td class="d-none d-md-table-cell">20%</td>
+                                        <td><span class="stato bg-success text-white py-1 px-2 rounded-3">Done</span>
+                                        </td>
                                         <td>
-                                            <i class="fa-solid fa-pen border border-dark-subtle p-2 text-body-secondary rounded-3 mx-1"></i>
-                                            <i class="fa-solid fa-trash border border-dark-subtle p-2 text-body-secondary rounded-3"></i>
+                                            <i
+                                                class="fa-solid fa-pen border border-dark-subtle p-2 text-body-secondary rounded-3 mx-1"></i>
+                                            <i
+                                                class="fa-solid fa-trash border border-dark-subtle p-2 text-body-secondary rounded-3"></i>
                                         </td>
                                     </tr>
                                     <tr class="text-center">
@@ -169,12 +181,15 @@
 
                                             Classe 77
                                         </td>
-                                        <td class="d-none d-md-block">17 Feb 2021</td>
-                                        <td class="d-none d-md-block">20%</td>
-                                        <td><span class="stato bg-warning text-white py-1 px-2 rounded-3">Process</span></td>
+                                        <td class="d-none d-md-table-cell">17 Feb 2021</td>
+                                        <td class="d-none d-md-table-cell">20%</td>
+                                        <td><span class="stato bg-warning text-white py-1 px-2 rounded-3">Process</span>
+                                        </td>
                                         <td>
-                                            <i class="fa-solid fa-pen border border-dark-subtle p-2 text-body-secondary rounded-3 mx-1"></i>
-                                            <i class="fa-solid fa-trash border border-dark-subtle p-2 text-body-secondary rounded-3"></i>
+                                            <i
+                                                class="fa-solid fa-pen border border-dark-subtle p-2 text-body-secondary rounded-3 mx-1"></i>
+                                            <i
+                                                class="fa-solid fa-trash border border-dark-subtle p-2 text-body-secondary rounded-3"></i>
                                         </td>
                                     </tr>
                                     <tr class="text-center">
@@ -183,12 +198,15 @@
 
                                             Classe 78
                                         </td>
-                                        <td class="d-none d-md-block">18 Feb 2021</td>
-                                        <td class="d-none d-md-block">20%</td>
-                                        <td><span class="stato bg-success text-white py-1 px-2 rounded-3">Done</span></td>
+                                        <td class="d-none d-md-table-cell">18 Feb 2021</td>
+                                        <td class="d-none d-md-table-cell">20%</td>
+                                        <td><span class="stato bg-success text-white py-1 px-2 rounded-3">Done</span>
+                                        </td>
                                         <td>
-                                            <i class="fa-solid fa-pen border border-dark-subtle p-2 text-body-secondary rounded-3 mx-1"></i>
-                                            <i class="fa-solid fa-trash border border-dark-subtle p-2 text-body-secondary rounded-3"></i>
+                                            <i
+                                                class="fa-solid fa-pen border border-dark-subtle p-2 text-body-secondary rounded-3 mx-1"></i>
+                                            <i
+                                                class="fa-solid fa-trash border border-dark-subtle p-2 text-body-secondary rounded-3"></i>
                                         </td>
                                     </tr>
                                     <tr class="text-center">
@@ -197,12 +215,15 @@
 
                                             Classe 79
                                         </td>
-                                        <td class="d-none d-md-block">19 Feb 2021</td>
-                                        <td class="d-none d-md-block">20%</td>
-                                        <td><span class="stato bg-danger text-white py-1 px-2 rounded-3">Failed</span></td>
+                                        <td class="d-none d-md-table-cell">19 Feb 2021</td>
+                                        <td class="d-none d-md-table-cell">20%</td>
+                                        <td><span class="stato bg-danger text-white py-1 px-2 rounded-3">Failed</span>
+                                        </td>
                                         <td>
-                                            <i class="fa-solid fa-pen border border-dark-subtle p-2 text-body-secondary rounded-3 mx-1"></i>
-                                            <i class="fa-solid fa-trash border border-dark-subtle p-2 text-body-secondary rounded-3"></i>
+                                            <i
+                                                class="fa-solid fa-pen border border-dark-subtle p-2 text-body-secondary rounded-3 mx-1"></i>
+                                            <i
+                                                class="fa-solid fa-trash border border-dark-subtle p-2 text-body-secondary rounded-3"></i>
                                         </td>
                                     </tr>
                                     <tr class="text-center">
@@ -211,12 +232,15 @@
 
                                             Classe 80
                                         </td>
-                                        <td class="d-none d-md-block">20 Feb 2021</td>
-                                        <td class="d-none d-md-block">20%</td>
-                                        <td><span class="stato bg-success text-white py-1 px-2 rounded-3">Done</span></td>
+                                        <td class="d-none d-md-table-cell">20 Feb 2021</td>
+                                        <td class="d-none d-md-table-cell">20%</td>
+                                        <td><span class="stato bg-success text-white py-1 px-2 rounded-3">Done</span>
+                                        </td>
                                         <td>
-                                            <i class="fa-solid fa-pen border border-dark-subtle p-2 text-body-secondary rounded-3 mx-1"></i>
-                                            <i class="fa-solid fa-trash border border-dark-subtle p-2 text-body-secondary rounded-3"></i>
+                                            <i
+                                                class="fa-solid fa-pen border border-dark-subtle p-2 text-body-secondary rounded-3 mx-1"></i>
+                                            <i
+                                                class="fa-solid fa-trash border border-dark-subtle p-2 text-body-secondary rounded-3"></i>
                                         </td>
                                     </tr>
                                     <tr class="text-center">
@@ -225,12 +249,15 @@
 
                                             Classe 81
                                         </td>
-                                        <td class="d-none d-md-block">21 Feb 2021</td>
-                                        <td class="d-none d-md-block">20%</td>
-                                        <td><span class="stato bg-danger text-white py-1 px-2 rounded-3">Failed</span></td>
+                                        <td class="d-none d-md-table-cell">21 Feb 2021</td>
+                                        <td class="d-none d-md-table-cell">20%</td>
+                                        <td><span class="stato bg-danger text-white py-1 px-2 rounded-3">Failed</span>
+                                        </td>
                                         <td>
-                                            <i class="fa-solid fa-pen border border-dark-subtle p-2 text-body-secondary rounded-3 mx-1"></i>
-                                            <i class="fa-solid fa-trash border border-dark-subtle p-2 text-body-secondary rounded-3"></i>
+                                            <i
+                                                class="fa-solid fa-pen border border-dark-subtle p-2 text-body-secondary rounded-3 mx-1"></i>
+                                            <i
+                                                class="fa-solid fa-trash border border-dark-subtle p-2 text-body-secondary rounded-3"></i>
                                         </td>
                                     </tr>
                                     <tr class="text-center">
@@ -239,29 +266,135 @@
 
                                             Classe 82
                                         </td>
-                                        <td class="d-none d-md-block">22 Feb 2021</td>
-                                        <td class="d-none d-md-block">20%</td>
-                                        <td><span class="stato bg-success text-white py-1 px-2 rounded-3">Done</span></td>
+                                        <td class="d-none d-md-table-cell">22 Feb 2021</td>
+                                        <td class="d-none d-md-table-cell">20%</td>
+                                        <td><span class="stato bg-success text-white py-1 px-2 rounded-3">Done</span>
+                                        </td>
                                         <td>
-                                            <i class="fa-solid fa-pen border border-dark-subtle p-2 text-body-secondary rounded-3 mx-1"></i>
-                                            <i class="fa-solid fa-trash border border-dark-subtle p-2 text-body-secondary rounded-3"></i>
+                                            <i
+                                                class="fa-solid fa-pen border border-dark-subtle p-2 text-body-secondary rounded-3 mx-1"></i>
+                                            <i
+                                                class="fa-solid fa-trash border border-dark-subtle p-2 text-body-secondary rounded-3"></i>
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
-                        
+
                     </div>
-                    <div class="faq col_large"></div>
+
+
+                    <div class="faq col_large mt-4 px-3">
+
+                        <div
+                            class="container_title fs-2 mt-5 px-3 pt-2 pb-2 border border-bottom-0 rounded-top-3 border-dark-subtle bg-body-tertiary">
+                            FAQ
+                        </div>
+                        <div class="accordion border border-dark-subtle rounded-bottom-3"
+                            id="accordionPanelsStayOpenExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                        aria-controls="panelsStayOpen-collapseOne">
+                                        Come aggiungere un nuovo studente?
+                                    </button>
+                                </h2>
+                                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                                    <div class="accordion-body">
+                                        <strong>Per aggiungere un nuovo studente, </strong>clicca sul pulsante <a
+                                            class="text-decoration-none" href="#direct-link-plus">+</a> nella sezione
+                                        blu.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                                        aria-controls="panelsStayOpen-collapseTwo">
+                                        Come posso accedere alle informazioni del mio account?
+                                    </button>
+                                </h2>
+                                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        <strong>Per accedere alle informazioni sul tuo account</strong> ti basta
+                                        cliccare la <strong>campanellina</strong> in alto
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                                        aria-controls="panelsStayOpen-collapseThree">
+                                        Posso usare questa dashboard da mobile?
+                                    </button>
+                                </h2>
+                                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        Certo. <strong>Bootstrap Dashboard si adatta a diversi dispositivi e necessità
+                                            dei suoi utenti</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                
+
                 <div class="ms_row right_row">
-                    <div class="todo col_small"></div>
-                    <div class="graph col_small"></div>   
+
+                    <div
+                        class="container_title fs-2 mx-3 mt-5 px-3 pt-2 pb-2 border border-bottom-0 rounded-top-3 border-dark-subtle bg-body-tertiary">
+                        Todo
+                    </div>
+
+                    <div class="todo col_small px-1 border mx-3 border-dark-subtle mb-5 py-3 bg-white rounded-bottom-3">
+
+                        <div class="form-check border rounded-top-3 ps-5 py-2 mx-2">
+                            <input class="form-check-input" type="checkbox" value="" id="Kickoff">
+                            <label class="form-check-label" for="Kickoff">
+                                Kickoff nuove classi
+                            </label>
+                        </div>
+
+                        <div class="form-check border border-top-0 ps-5 py-2 mx-2">
+                            <input class="form-check-input" type="checkbox" value="" id="Lesson">
+                            <label class="form-check-label" for="Lesson">
+                                Lezione su Bootstrap 5 in classe #75
+                            </label>
+                        </div>
+
+                        <div class="form-check border border-top-0 ps-5 py-2 mx-2 rounded-bottom-3">
+                            <input class="form-check-input" type="checkbox" value="" id="Github">
+                            <label class="form-check-label" for="Github">
+                                Controllare username github studenti
+                            </label>
+                        </div>
+
+                    </div>
+
+
+                    <div class="graph col_small border p-3 m-3 rounded-3 bg-white">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <img class="img-fluid" src="./assets/img/stats.jpeg" alt="">
+                            </li>
+                            <li class="list-group-item">
+                                Utenti Attivi
+                                <aside>Lista deli utenti attivi in piattaforma nell'ultimo mese</aside>
+                            </li>
+                            <li class="list-group-item per-month">Gennaio: 1200</li>
+                            <li class="list-group-item per-month">Febbraio: 800</li>
+                            <li class="list-group-item per-month">Marzo: 1500</li>
+                            <li class="list-group-item per-month py-3"><a href="#">Visualizza report approfondito</a></li>
+                          </ul>
+
+                    </div>
                 </div>
 
             </div>
-            </div>
+        </div>
     </main>
 
 
